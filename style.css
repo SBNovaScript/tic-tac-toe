@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --header-height: 5rem;
+    --header-height-mobile: 15rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #F7F7F7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/** Header styling **/
+
+header {
+    display: flex;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: var(--header-height);
+    justify-content: space-around;
+    background-color: #77A0A9;
+    align-items: center;
+    z-index: 1;
+    transition: box-shadow 0.1s;
+}
+
+header:hover {
+    box-shadow: 0px 10px 5px #6F7D8C;
+}
+
+header a {
+    text-decoration: none;
+    color: #3B3B3B;
+    padding: 0.5rem;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+header a:hover {
+    background-color: #F7F7F7;
+    border-radius: 0.3rem;
+}
+
+.logo {
+    height: 2rem;
+    transition: box-shadow 0.1s;
+}
+
+.logo:hover {
+    box-shadow: 0px 10px 5px #6F7D8C;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    list-style: none;
+    padding: 0 15%;
+}
+
+main {
+    background-color: 77A0A9;
+    position: absolute;
+    margin-top: var(--header-height);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    background-color: #32021F;
+    width: 80%;
+    height: 80vw;
+    border: 6px solid #32021F;
+    border-radius: 10px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.grid-cell {
+    background-color: #6C596E;
+    border: 6px solid #32021F;
+    color: #77A0A9;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+/** responsive sizing **/
+
+@media screen and (max-width: 48em){
+    body {
+        background-color: red;
+    }
+
+    header {
+        flex-direction: column;
+        height: var(--header-height-mobile);
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        padding: 10% 15%;
+    }
+
+    main {
+        margin-top: var(--header-height-mobile);
+    }
+}
+
