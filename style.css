@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/** Global Variables **/
+
 :root {
     --header-height: 5rem;
     --header-height-mobile: 15rem;
@@ -15,7 +17,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/** Header styling **/
+/** Header **/
 
 header {
     display: flex;
@@ -65,6 +67,8 @@ header a:hover {
     padding: 0 15%;
 }
 
+/** Main Content **/
+
 main {
     background-color: 77A0A9;
     position: absolute;
@@ -81,8 +85,8 @@ main {
 
 .grid-container {
     background-color: #32021F;
-    width: 80%;
-    height: 80vw;
+    width: 80vw;
+    height: 80vh;
     border: 6px solid #32021F;
     border-radius: 10px;
     display: grid;
@@ -102,7 +106,7 @@ main {
     transition: all 1s;
 }
 
-/** responsive sizing **/
+/** Responsive Sizing **/
 
 @media screen and (max-width: 48em){
     body {
@@ -124,6 +128,10 @@ main {
 
     main {
         margin-top: var(--header-height-mobile);
+    }
+
+    .grid-container {
+        height: 40vh;
     }
 }
 
